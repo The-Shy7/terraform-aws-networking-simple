@@ -4,12 +4,13 @@ This module manages the creation of VPCs and subnets, allowing for the creation 
 Example usage:
 ```
 module "vpc" {
-  source = "./modules/networking"
+  source  = "The-Shy7/networking-simple/aws"
 
   vpc_config = {
     cidr_block = "10.0.0.0/16"
     name       = "example_vpc"
   }
+
   subnet_config = {
     subnet_1 = {
       cidr_block = "10.0.0.0/24"
